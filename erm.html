@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            lia is cooler
+        </title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js">
+        </script>
+
+    </head>
+
+    <body style="background-color: burlywood;">
+        <!-- <h1>
+            HELP ME!
+        </h1>
+
+        ROCK ON BROTHER<br> -->
+
+        <img id="rockon" src="img/rockon.jpg" width="250" height="250" onmouseover = "this.src = 'img/yellow.jpeg';" onmouseout = "this.src = 'img/rockon.jpg';">
+        <img id="epic" src="img/no.jpg" width="250" height="250" onmouseover = "this.src = 'img/wrinkles.jpg';" onmouseout = "this.src = 'img/no.jpg';">
+        <img id="circle" src="img/yeah.jpg" width="250" height="250" onmouseover = "this.src = 'img/color.jpg';" onmouseout = "this.src = 'img/yeah.jpg';">
+
+        <script>
+            var water = new buzz.sound("sound/water.mp3");
+            var elevator = new buzz.sound("sound/elevator.mp3");
+            var beep = new buzz.sound("sound/beep.mp3");
+
+            window.onload = function() {
+                document.getElementById('rockon').addEventListener('mouseover', function() {water.play();});
+                document.getElementById('epic').addEventListener('mouseover', function() {elevator.play();});
+                document.getElementById('circle').addEventListener('mouseover', function() {beep.play();});
+            }
+        </script>
+
+    </body>
+
+</html>
+
