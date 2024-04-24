@@ -1,0 +1,87 @@
+<html>
+   <head>
+       <title>
+           Lia Aguilar
+       </title>
+
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js">
+       </script>
+
+
+       <style>
+           .row{
+               width: 720;
+               margin: 50 auto 50 auto
+           }
+
+
+           .image_container{
+               display: table-cell;
+               vertical-align: middle;
+               padding: 30;
+           }
+       </style>
+
+
+   </head>
+
+
+   <body style="background-color: bisque;">
+
+       <div class="row">
+           <div class="image_container"><img id="announcement" src="img/announcement1.png" width="100%" height="100%" onmouseover = "this.src = 'img/announcement2.png';" onmouseout = "this.src = 'img/announcement1.png';"> </div>
+           <div class="image_container"><img id="artist" src="img/artist1.png" width="100%" height="100%" onmouseover = "this.src = 'img/artist2.png';" onmouseout = "this.src = 'img/artist1.png';"></div>
+           <div class="image_container"><img id="calendar" src="img/calendar1.png" width="100%" height="100%" onmouseover = "this.src = 'img/calendar2.png';" onmouseout = "this.src = 'img/calendar1.png';"></div>
+       </div>
+
+
+       <div class="row">
+           <div class="image_container"><img id="drum" src="img/drum1.png" width="100%" height="100%" onmouseover = "this.src = 'img/drum2.png';" onmouseout = "this.src = 'img/drum1.png';"> </div>
+           <div class="image_container"><img id="forum" src="img/forum1.png" width="100%" height="100%" onmouseover = "this.src = 'img/forum2.png';" onmouseout = "this.src = 'img/forum1.png';"></div>
+           <div class="image_container"><img id="genre" src="img/genre1.png" width="100%" height="100%" onmouseover = "this.src = 'img/genre2.png';" onmouseout = "this.src = 'img/genre1.png';"></div>
+       </div>
+
+
+       <div class="row">
+           <div class="image_container"><img id="guitar" src="img/guitar1.png" width="100%" height="2100%0" onmouseover = "this.src = 'img/guitar2.png';" onmouseout = "this.src = 'img/guitar1.png';"> </div>
+           <div class="image_container"><img id="keyboard" src="img/keyboard1.png" width="100%" height="100%" onmouseover = "this.src = 'img/keyboard2.png';" onmouseout = "this.src = 'img/keyboard1.png';"></div>
+           <div class="image_container"><img id="sing" src="img/sing1.png" width="100%" height="100%" onmouseover = "this.src = 'img/sing2.png';" onmouseout = "this.src = 'img/sing1.png';"></div>
+       </div>
+
+
+     
+       <script>
+           var announces = new buzz.sound("sound/announce.mp3");
+           var paintbrushs = new buzz.sound("sound/paintbrush.mp3");
+           var calendars = new buzz.sound("sound/calendar.mp3");
+
+           var drumfills = new buzz.sound("sound/drumfill.mp3");
+           var textings = new buzz.sound("sound/texting.mp3");
+           var jazzs = new buzz.sound("sound/jazz.mp3");
+
+           var guitars = new buzz.sound("sound/guitar.mp3");
+           var pianos = new buzz.sound("sound/piano.mp3");
+           var singings = new buzz.sound("sound/singing.mp3");
+
+
+           window.onload = function() {
+               document.getElementById('announcement').addEventListener('mouseover', function() {announces.play();});
+               document.getElementById('artist').addEventListener('mouseover', function() {paintbrushs.play();});
+               document.getElementById('calendar').addEventListener('mouseover', function() {calendars.play();});
+
+               document.getElementById('drum').addEventListener('mouseover', function() {drumfills.play();});
+               document.getElementById('forum').addEventListener('mouseover', function() {textings.play();});
+               document.getElementById('genre').addEventListener('mouseover', function() {jazzs.play();});
+
+               document.getElementById('guitar').addEventListener('mouseover', function() {guitars.play();});
+               document.getElementById('keyboard').addEventListener('mouseover', function() {pianos.play();});
+               document.getElementById('sing').addEventListener('mouseover', function() {singings.play();});
+           }
+       </script>
+
+
+   </body>
+
+
+</html>
